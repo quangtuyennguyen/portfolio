@@ -1,0 +1,41 @@
+.navbar-toggler {
+    @include respond(tab-port) {
+        border: none;
+        border-radius: 0px;
+        padding: 0px;
+        cursor: pointer;
+        margin-top: 2.7rem;
+        margin-bottom: 2.3rem;
+
+        &[aria-expanded="false"] span:nth-child(2) {
+            opacity: 1;
+        }
+
+        &[aria-expanded="true"] span:nth-child(2) {
+            opacity: 0;
+        }
+
+        &[aria-expanded="true"] span:first-child {
+            transform: rotate(-45deg);
+            position: relative;
+            top: 0.75rem;
+        }
+
+        &[aria-expanded="true"] span:last-child {
+            transform: rotate(45deg);
+            bottom: 0.6rem;
+            position: relative;
+        }
+
+        span {
+            display: block;
+            width: 2.5rem;
+            height: 0.3rem;
+            background: #8490ff;
+            margin: auto;
+            margin-bottom: 0.4rem;
+            transition: all 400ms linear;
+            cursor: pointer;
+        }
+    }
+}

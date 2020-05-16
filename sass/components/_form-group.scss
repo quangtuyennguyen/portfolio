@@ -1,0 +1,15 @@
+.form {
+    &__input {
+        height: 4rem;
+        background: #fff;
+        border-radius: 0;
+        width: 80%;
+        border: none;
+        padding: 0px 1.5rem;
+        font-size: 1.4rem;
+        font-family: $rob-font;
+        color: #959595;
+        outline: none;
+        box-shadow: none;
+    }
+}

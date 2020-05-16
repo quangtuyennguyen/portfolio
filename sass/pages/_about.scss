@@ -1,0 +1,63 @@
+.about {
+    &__details {
+        margin-top: 4.5rem;
+
+        @include respond(tab-port-small) {
+            margin-top: 0;
+
+            .row {
+                margin-bottom: -3rem;
+            }
+        }
+
+        p {
+            max-width: 49.5rem;
+            margin-left: 0;
+        }
+    }
+
+
+    .heading-secondary {
+        text-align: left;
+        margin-bottom: 4rem;
+    }
+
+    &__stat {
+        border: 1px solid #eeeeee;
+        padding: 3rem 2.5rem;
+        border-radius: 0.5rem;
+
+        @include respond(tab-port-small) {
+            margin-bottom: 3rem;
+        }
+
+        i {
+            font-size: 2.4rem;
+            background: linear-gradient(to right, #8490ff 0%, #62bdfc 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &-value {
+            font-size: 2.4rem;
+            font-family: $hee-font;
+            font-weight: bold;
+            color: $color-back;
+            margin-bottom: 0.5rem;
+            margin-top: 1rem;
+            span {
+                font-weight: 500;
+            }
+        }
+
+        &-name {
+            max-width: 49.5rem;
+            font-size: 1.4rem;
+            margin: 0;
+
+            @include respond(tab-land) {
+                line-height: 2rem;
+            }
+        }
+    }
+}

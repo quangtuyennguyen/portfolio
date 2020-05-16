@@ -1,0 +1,22 @@
+.social {
+    &__item {
+        margin-right: 1.7rem;
+        display: inline-block;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            a {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__link {
+        color: #cccccc;
+        font-size: 1.4rem;
+        @include transition;
+    }
+}

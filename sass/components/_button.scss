@@ -1,0 +1,44 @@
+.btn {
+
+    &,
+    &:visited,
+    &:focus,
+    &:active {
+        outline: none;
+        box-shadow: none;
+        display: inline-block;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 1.3rem;
+        font-family: $rob-font;
+        font-weight: 500;
+        @include transition;
+        color: $color-white;
+    }
+
+    &--main {
+        padding: 0 4.2rem;
+        line-height: 5rem;
+        background-image: linear-gradient(to right, #8490ff 0%, #62bdfc 48%, #8490ff 100%);
+        background-size: 200% auto;
+        border-radius: 0.5rem;
+
+        &:hover {
+            background-position: right center;
+            color: $color-white;
+        }
+    }
+
+    &--sub {
+        border-radius: 0;
+        background-image: -moz-linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
+        background-image: -webkit-linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
+        background-image: -ms-linear-gradient(0deg, rgb(132, 144, 255) 0%, rgb(98, 189, 252) 100%);
+        outline: none !important;
+        box-shadow: none !important;
+        padding: 0;
+        width: 4.2rem;
+        cursor: pointer;
+        color: #fff;
+    }
+}

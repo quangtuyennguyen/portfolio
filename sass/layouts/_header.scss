@@ -1,0 +1,20 @@
+//header css
+.header {
+    .navbar-collapse {
+        @include respond(tab-port-min) {
+            display: block;
+        }
+
+        @include respond(tab-port) {
+            max-height: 34rem;
+        }
+
+        @include respond(phone-small) {
+            max-height: 25rem;
+        }
+    }
+
+    .row {
+        align-items: center;
+    }
+}

@@ -1,0 +1,132 @@
+.banner {
+    z-index: 1;
+    background: url(../images/banner/home-banner.jpg) no-repeat scroll center center;
+    background-size: cover;
+
+    @include respond(tab-port-small) {
+        min-height: 50rem;
+    }
+
+    @include respond(phone) {
+        min-height: 45rem;
+    }
+
+    &__inner {
+        width: 100%;
+
+        @include respond(tab-land) {
+            padding: 100px 0px;
+        }
+
+        @include respond(tab-port-small) {
+            min-height: 50rem;
+        }
+
+        @include respond(phone) {
+            min-height: 45rem;
+        }
+
+        .col-lg-6 {
+            vertical-align: middle;
+            align-self: center;
+        }
+    }
+
+    &__image-box {
+        padding-top: 19.5rem;
+
+        img {
+            width: 40rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 0;
+        }
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__content {
+        text-align: left;
+        color: $color-back;
+
+        @include respond(tab-port) {
+            padding-top: 5rem;
+        }
+
+        @include respond(tab-port-small) {
+            margin-top: 0;
+        }
+
+        @include respond(phone) {
+            padding-top: 0;
+        }
+
+        @include respond(phone-small) {
+            margin-top: 0;
+        }
+    }
+
+    &__desc {
+        color: $color-grey-light;
+        font-family: $rob-font;
+        max-width: 680px;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        margin: 0px auto 4.5rem 0;
+    }
+
+    .heading {
+        &-primary {
+            &--main {
+                margin: 0;
+
+                @include respond(tab-land) {
+                    font-size: 4rem;
+                }
+            }
+
+            @include respond(phone) {
+                &--sub {
+                    margin-top: 0;
+                }
+
+                &--main {
+                    font-size: 2.8rem;
+                    line-height: 3.8rem;
+                    color: $color-grey-dark;
+                }
+            }
+        }
+    }
+
+    .text-js {
+        opacity: 0;
+    }
+
+    .cursor {
+        display: block;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: -5px;
+        width: 3px;
+        /* Change colour of Cursor Here */
+        background-color: $color-grey-dark;
+        z-index: 1;
+        animation: flash 0.5s infinite;
+    }
+
+
+    // Text Can be styled just like normal
+    .headline {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h1 {
+            letter-spacing: 1.6px;
+        }
+    }
+}

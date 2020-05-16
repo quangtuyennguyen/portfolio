@@ -1,0 +1,49 @@
+/* 
+@Default Styles
+Table of Content:
+01/ Variables
+02/ Mixins
+03/ Reset
+04/ Typography
+05/ Animation
+06/ Utils
+07/ Home
+08/ About
+09/ Contact
+10/ Banner
+11/ Form group
+12/ Navbar Toggler
+13/ Navbar
+14/ Social 
+15/ Button 
+16/ service__desc 
+17/ Projects 
+18/ Skill 
+19/ Header 
+20/ Footer 
+*/
+
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './base/reset';
+@import './base/typography';
+@import './base/animations';
+
+@import './utils/utils';
+
+@import './pages/home';
+@import './pages/about';
+@import './pages/contact';
+
+@import './components/banner';
+@import './components/form-group';
+@import './components/navbar-toggler';
+@import './components/navbar';
+@import './components/social';
+@import './components/button';
+@import './components/service';
+@import './components/projects';
+@import './components/skill';
+
+@import './layouts/header';
+@import './layouts/footer';

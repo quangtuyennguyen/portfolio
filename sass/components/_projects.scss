@@ -1,0 +1,143 @@
+.project {
+    &__filter {
+        .filter {
+            text-align: center;
+            margin-top: 7rem;
+            margin-bottom: 5rem;
+
+            &__item {
+                display: inline-block;
+                margin-right: 3rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    a {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+            &__link {
+                font-size: 1.3rem;
+                font-family: $rob-font;
+                color: $color-grey-light;
+            }
+        }
+    }
+
+    &__inner {
+        @include respond(phone) {
+            max-width: 36rem;
+            margin: 0 auto -3rem;
+        }
+    }
+
+    &__item {
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin-bottom: 3rem;
+        background-color: #000;
+
+        &:hover {
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.04);
+        }
+
+        &:before {
+            content: "";
+            background: rgba(255, 255, 255, .80);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 300ms ease;
+        }
+
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+
+            .project__show-img {
+                @include transform(scale(2));
+                @extend %showElm;
+            }
+
+            span {
+                @include transform(translateY(0%));
+                @extend %showElm;
+
+            }
+        }
+    }
+
+    &__text {
+        position: absolute;
+        left: 0px;
+        bottom: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+        &-heading {
+            font-size: 2.1rem;
+            font-family: $hee-font;
+            font-weight: bold;
+            color: $color-back;
+            @include transition;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        &-desc {
+            margin-bottom: 0;
+            font-size: 1.4rem;
+            overflow: hidden;
+            position: relative;
+            top: -0.4rem;
+
+            &.project__text-desc span {
+                transition-delay: .1s;
+            }
+        }
+
+        span {
+            @include transition(all, .3s, ease);
+            @include transform(translateY(2rem));
+            display: block;
+            @extend %hideElm;
+        }
+    }
+
+    &__show-img {
+        @extend %hideElm;
+        @include transition(all, .3s, ease);
+        @include transform(scale(2));
+
+        &:hover {
+            &:before {
+                color: $primary-color;
+            }
+        }
+
+        &:before {
+            color: #626262;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            font-weight: bold;
+            font-size: 3rem;
+            margin: 0;
+            @include transition(all, .3s, ease);
+            cursor: pointer;
+        }
+    }
+}

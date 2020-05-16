@@ -1,0 +1,19 @@
+// Font Variables
+$rob-font: 'Roboto',
+sans-serif;
+$hee-font: 'Heebo',
+sans-serif;
+
+
+// Color Variables
+$primary-color: #8490ff;
+
+$color-back: #2a2a2a;
+$color-white: #fff;
+
+$color-grey-light: #777777;
+$color-grey-dark: #000410;
+
+
+// Import font
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Roboto:300,400,500,700');

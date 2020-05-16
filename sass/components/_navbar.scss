@@ -1,0 +1,198 @@
+.top-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    width: 100%;
+    z-index: 99;
+    transition: 0.4s, all 0.3s linear;
+
+    .col-auto:first-child {
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+    &__logo {
+        img {
+            @include respond(tab-port) {
+                width: 4rem;
+            }
+        }
+    }
+
+    @include respond(tab-port-min) {
+        padding: 3rem 0;
+    }
+
+    &.navbar-fixed {
+        position: fixed;
+        width: 100%;
+        top: -7rem;
+        left: 0;
+        right: 0;
+        background: #fff;
+        transform: translateY(7rem);
+        transition: transform 500ms ease, 500ms ease;
+        transition: transform 500ms ease, background 500ms ease;
+        -webkit-transition: transform 500ms ease, background 500ms ease;
+        box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+
+        @include respond(tab-port-min) {
+            padding: 1rem 0;
+        }
+    }
+
+    @include respond(tab-port) {
+        background: #fff;
+
+        &__logo-box {
+            @include dFlex(space-between, center);
+        }
+
+        .container {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+
+    &__menu {
+        text-align: right;
+
+        @include respond(tab-port) {
+            text-align: left;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+        }
+
+        @include respond(tab-port-min) {
+            display: inline-block;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 2px;
+                height: 100%;
+                background-color: $primary-color;
+                transform: scaleY(0);
+                transform-origin: top left;
+
+                transition: transform 0.3s;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 2px;
+                height: 100%;
+                background-color: $primary-color;
+                transform: scaleY(0);
+                transform-origin: bottom right;
+
+                transition: transform 0.3s;
+            }
+
+            &:hover,
+            &.active {
+
+                &:before,
+                &:after {
+                    transform: scaleY(1);
+                }
+
+                .top-nav__link {
+
+                    &:before,
+                    &:after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+
+        @include respond(tab-land) {
+            &:not(:last-child) {
+                margin-right: 2.8rem;
+            }
+        }
+
+        @include respond(tab-port) {
+            margin-right: 0;
+            display: block;
+        }
+
+        @include respond(tab-port-min) {
+            &.top-nav__item-wrapper {
+                position: relative;
+                display: inline-block;
+            }
+        }
+
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &__link {
+        font: 500 1.2rem $rob-font;
+        text-transform: uppercase;
+        color: $color-back;
+        padding: 0;
+        display: inline-block;
+        position: relative;
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        @include respond(tab-port-min) {
+            padding: 0.8rem 1.2rem;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $primary-color;
+                transform: scaleX(0);
+                transform-origin: top left;
+
+                transition: transform 0.3s;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $primary-color;
+                transform: scaleX(0);
+                transform-origin: bottom right;
+
+                transition: transform 0.3s;
+            }
+        }
+
+        @include respond(tab-port) {
+            margin-right: 0;
+            border-bottom: 1px solid #ededed33;
+            border-radius: 0;
+            padding: 0.8rem 0;
+        }
+    }
+}

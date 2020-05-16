@@ -1,0 +1,13 @@
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .about__stat i,
+    .contact i:before,
+    .service__item:hover i:before {
+        color: #8490ff;
+        background: none;
+    }
+    .heading-secondary--big {
+        background: none;
+        color: #2a2a2a;
+    }
+}
